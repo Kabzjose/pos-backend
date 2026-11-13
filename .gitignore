@@ -15,3 +15,5 @@ prisma/generated
 /.cursor
 /.devin
 /.agents
+/src/generated/prisma
+/.windsurf
