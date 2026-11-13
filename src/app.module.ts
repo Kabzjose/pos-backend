@@ -1,10 +1,8 @@
 import { Module } from '@nestjs/common';
-import { createObserveModule } from '@nestjs/observe';
 import { ConfigModule } from '@nestjs/config';
-import { validateEnv } from './config/env.validation.js';
-
-
-export const { ObserveModule, ObserveInstrument } = createObserveModule();
+import { validateEnv } from './config/env.validation';
+import { PrismaModule } from './prisma/prisma.module';
+import { HealthModule } from './health/health.module';
 
 @Module({
   imports: [
@@ -12,9 +10,8 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
       isGlobal: true,
       validate: validateEnv,
     }),
+    PrismaModule,
+    HealthModule,
   ],
-  
-  controllers: [],
-  providers: [],
 })
 export class AppModule {}
