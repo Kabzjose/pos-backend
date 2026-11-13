@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "preserve",
+    "module": "commonjs",
     "moduleResolution": "bundler",
     "resolvePackageJsonExports": true,
     "esModuleInterop": true,
